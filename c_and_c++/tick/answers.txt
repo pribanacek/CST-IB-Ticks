@@ -1,0 +1,13 @@
+Exercise 1
+
+server.c loads the file specified in the arguments during initialization and then runs in an infinite loop,
+accepting any incoming client connections. Whenever a client connects, the contents of that file is sent in
+chunks of size BUFSIZE.
+client.c tries to connect to the specified address and port, and sends to standard output whatever it reads
+from the socket.
+
+Errors:
+    Line 19 in server.c: condition should be (argc != 3), not (argc != 2)
+    Line 74 in server.c: missing }
+    Line 57 in server.c: w isn't initialised to 0
+    Line 39 in client.c: array size should be BUFSIZE, not BUFSIZE-1
